@@ -1,6 +1,6 @@
-CREATE DATABASE if not exists acts1825;
+CREATE DATABASE if not exists test;
 
-USE acts1825;
+USE test;
 
 CREATE TABLE Worker (
 	WORKER_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
