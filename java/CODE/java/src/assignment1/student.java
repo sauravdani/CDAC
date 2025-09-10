@@ -1,5 +1,6 @@
 package assignment1;
 
+
 public class student {
 	private String name;
 	private int rollno;
@@ -45,19 +46,19 @@ public class student {
 		return "name: " + name + " " + "roll no: " + rollno + "total Marks: " + totalmarks;
 	}
 	
-	public static void main(String[] args) {
-		student stud = new student();
-		stud.setName("Max");
-		stud.setTotalMark(96);
-		
-		student stud1 = new student("Toney",98);
-		
-		System.out.println(stud1.toString());
-		System.out.println(stud.toString());
-		
-		System.out.print(student.displaycount()-1);
-		
-
-	}
+//	public static void main(String[] args) {
+//		student stud = new student();
+//		stud.setName("Max");
+//		stud.setTotalMark(96);
+//		
+//		student stud1 = new student("Toney",98);
+//		
+//		System.out.println(stud1.toString());
+//		System.out.println(stud.toString());
+//		
+//		System.out.print(student.displaycount()-1);
+//		
+//
+//	}
 
 }
