@@ -1,6 +1,8 @@
 package assignment2;
 
-public abstract class Vehicle {
+import assignment3.Rentable;
+
+public abstract class Vehicle implements Rentable{
 	protected int registration_no;
 	protected String make;
 	protected String model;
