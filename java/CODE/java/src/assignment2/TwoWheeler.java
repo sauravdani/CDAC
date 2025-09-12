@@ -23,6 +23,31 @@ public class TwoWheeler extends Vehicle {
 			return hrs*300+((hrs-3)*100);
 		}
 	}
+	public int getRegis() {
+		return this.registration_no;
+	}
 	
+	public boolean equals(Object o) {
+		if (o instanceof TwoWheeler) {
+			TwoWheeler tw = (TwoWheeler)o;
+			if (tw.getRegis() == this.getRegis()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		TwoWheeler v1 = new TwoWheeler(1234, "tata", "nexon", 1200000);
+		TwoWheeler v2 = new TwoWheeler(1234, "tata", "nexon", 1200000);
+		
+		if (v1 == v2) {
+			System.out.println("v1 == v2");
+		}
+		else {
+			System.out.println("v1 != v2");
+		}
+		
+	}
 
 }

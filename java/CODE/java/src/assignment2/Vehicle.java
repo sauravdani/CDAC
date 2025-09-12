@@ -16,4 +16,8 @@ public abstract class Vehicle implements Rentable{
 	}
 	
 	public abstract double calculateInsurance();
+	
+	public static void main(String[] args) {
+		Vehicle v1 = 
+	}
 }
