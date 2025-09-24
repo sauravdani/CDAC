@@ -1,13 +1,14 @@
 package Day8;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.*;
 
-public class EmpCollecrion {
+public class EmpCollection {
 	
 	
 	
-	public List<Emp> getEmployeeDate()
+	public static List<Emp> getEmployeeDate()
 	{
 		
 		
@@ -66,16 +67,13 @@ public class EmpCollecrion {
 	public static void printList(List<Emp> emplist) {
 		for (Emp e: emplist) {
 			System.out.println(e);
+			
+			LocalDate dt = LocalDate.now();
+			System.out.print(dt);
 		}
 	}
 	
 	
-	public static void main(String[] args) {
-		EmpCollecrion getemp = new EmpCollecrion();
-		getemp.printList(emplist);
-		
-		
-
-	}
+	
 
 }

@@ -1,0 +1,37 @@
+Create a Student class with the following specifications:
+
+public class Student {
+    private String Prn;
+    private String name;
+    private int age;
+    private String course;
+    private LocalDate enrollmentDate;
+    private double gpa;
+    private String city;
+    
+    // Create appropriate constructor and getter-setter methods
+}
+
+1. List<String> getStudentNamesByCourse(List<Student> students, String course)
+   - Return names of all students from the specified course
+
+2. List<Student> getStudentsWithHighGPA(List<Student> students, double minGpa)
+   - Return students with GPA above the given threshold
+
+3. Set<String> getAllCities(List<Student> students)
+   - Return unique cities where students are from
+
+4. Map<String, Long> getStudentCountByCourse(List<Student> students)
+   - Group students by department and count how many in each course
+
+5. double getAverageGPA(List<Student> students)
+   - Calculate the average GPA of all students
+
+6. List<Student> getTopStudentsByGPA(List<Student> students, int limit)
+   - Return top N students with highest GPA
+
+7. List<Student> getStudentsSortedByName(List<Student> students)
+    - Return all students sorted alphabetically by name
+
+8. getStudentsByEnrollmentYear()
+     - group students by their enrollment year

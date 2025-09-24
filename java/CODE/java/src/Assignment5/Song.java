@@ -42,6 +42,21 @@ public class Song {
 	public void setArtists(Set<String> artists) {
 		this.artists = artists;
 	}
+	
+	public void addArtist(String artist) {
+		this.artists.add(artist);
+	}
+	
+	public void removeArtist(String artist) {
+		for (String s:artists) {
+			if (s.equals(artist)) {
+				artists.remove(artist);
+			}
+			else {
+				System.out.println("The artist is not present");
+			}
+		}
+	}
 
 	public int getR_year() {
 		return r_year;
@@ -57,6 +72,15 @@ public class Song {
 
 	public void setRating(String rating) {
 		this.rating = rating;
+	}
+	
+	public boolean equals(Song s) {
+		if (this.getSrno() == s.getSrno()) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	

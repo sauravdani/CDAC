@@ -1,0 +1,24 @@
+Perform following operations for a website that maintains articles
+An article should have 
+a. srno
+b. subject
+c. Year of publishing
+d. no of views
+e. Category (one article can belong to many categories
+e.g. healthcare/covid/children health
+
+1. List all the articles that were created in year 2023
+2. List all the articles by subject
+3. Count the articles by Subject
+5. List the articles that got more than 10k views
+6. Print the top 5 trending articles
+
+
+
+
+
+1. Calculate your age in no of days, months, years
+2. Compute programmers day without using plusDays
+3. Find out all the Fridays that fall on 13th in current year
+
+
