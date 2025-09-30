@@ -1,0 +1,2 @@
+class WithdrawAmountTooBig(Exception):
+    pass

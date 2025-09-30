@@ -8,11 +8,22 @@ public class DemoThread {
 		t1.setName("extender: ");
 		t1.start(); 
 		
-		Runnable t2 = new Thread2();
-		t2.run();
+		Thread t2 = new Thread(new Thread2());
+		t2.setName("implementer: ");
+		t2.start();
 		
+		Thread t3 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				for  (int i =0; i<10; i++) {
+					System.out.println(i);
+				}
+			}
+			
+		});
 		
-		
+		t3.start();
 		
 		for (int i = 0; i<10; i++) {
 			System.out.println(Thread.currentThread().getName() + i);

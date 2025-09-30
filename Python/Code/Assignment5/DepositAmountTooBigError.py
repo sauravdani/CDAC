@@ -1,0 +1,3 @@
+class DepositAmountTooBigError(Exception):
+    pass
+

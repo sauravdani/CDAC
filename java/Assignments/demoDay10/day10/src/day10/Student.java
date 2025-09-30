@@ -20,6 +20,10 @@ public class Student {
 		this.gpa = gpa;
 		this.city = city;
 	}
+	
+	Student(){
+	}
+	
 	public String getPrn() {
 		return Prn;
 	}
@@ -63,7 +67,7 @@ public class Student {
 		this.city = city;
 	}
     
-    public String toString() {
-    	return prn + ;
-    }
+//    public String toString() {
+//    	return prn + ;
+//    }
 }
