@@ -35,8 +35,8 @@ class BankApp:
     flag = True
 
     while flag:
-        accid=int(input("Enter account ID: "))
-        acc=account1
+        accid = int(input("Enter account ID: "))
+        acc = account1
         for i in accouts:
             if i._acc_id == accid:
                 acc = i
@@ -45,7 +45,7 @@ class BankApp:
         print("1.Withdraw")
         print("2.deposite")
         print("0.exit")
-        ch=int(input("Enter 1 or 2: "))
+        ch = int(input("Enter 1 or 2: "))
 
         match ch:
             case 1:
@@ -53,18 +53,16 @@ class BankApp:
                 try:
                     acc.withdraw(amount)
                 except WithdrawAmountTooBig as w:
-                    print (w)
+                    print(w)
                 except BalanceTooLow as w:
-                    print (w)
-
+                    print(w)
 
             case 2:
                 amount = int(input("Enter amount to deposite: "))
                 try:
                     acc.deposite(amount)
                 except DepositAmountTooBigError as d:
-                    print (d)
+                    print(d)
 
             case 0:
                 break
-
