@@ -20,3 +20,5 @@ dimond3
 #Ques5
 mtcar2 <- mtcars[c(2,18, 30, 12),]
 mtcar2
+
+mtcar
