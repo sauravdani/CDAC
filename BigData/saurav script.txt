@@ -1,14 +1,14 @@
 #!/bin/bash
 
 echo "before beggnning"
-pighivePath=/home/cloudera/hdp/pigandhive/labs/scripts/
+pighivePath=/home/cloudera/hdp/pigandhive/labs/
 salaries=salaries.txt
 small_blocks=small_blocks.txt
-sharedPath=/home/cloudera/shared/data/
+sharedPath=/home/cloudera/shared/scripts/
 temp=/tmp/
 
 
-cp -r $sharedPath$salaries/* $pighivePath
+cp -r $sharedPath/* $pighivePath
 
 if hdfs dfs -test -e test; then
 	echo "File already present"
