@@ -1,0 +1,46 @@
+Making the file directory: mkdir -p cloudera/hdp/pigandhive/labs
+Copying the file from shared to labs_home/demos: mkdir -p cloudera/hdp/pigandhive/labs
+
+
+
+
+
+[cloudera@quickstart demos]$ hdfs dfs -put stocks.csv
+[cloudera@quickstart demos]$ echo 0
+0
+
+Removing a file: hdfs dfs -rm stocks.csv
+
+Putting file to HDFS with a set block size: hdfs dfs -D dfs.blocksize=30 -put stocks.csv
+put: Specified block size is less than configured minimum value (dfs.namenode.fs-limits.min-block-size): 30 < 1048576
+
+check the size in this link: https://hadoop.apache.org/docs/r2.6.0/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+
+hdfs dfs -D dfs.blocksize=300000000 -put stocks.csv
+-put: Invalid values: dfs.bytes-per-checksum (=512) must divide block size (=300000000).
+Usage: hadoop fs [generic options] -put [-f] [-p] [-l] <localsrc> ... <dst>\n
+
+Right size command: hdfs dfs -D dfs.blocksize=1048576 -put stocks.csv
+
+
+
+
+
+listing the files in hdfs: hdfs dfs -ls
+
+hdfs dfs  -ls /user/cloudera/stocks.csv
+
+
+This will also take the same file as it will follow the relaticve path starting from HDFS home folder i.e. /user/cloudera: hdfs dfs  -ls stocks.csv
+
+getting the details of all the blocks: hdfs fsck /user/cloudera/stocks.csv -files -blocks -locations
+ >> day3.txt
+
+
+sudo find / -type f -name blk_1073742856
+/var/lib/hadoop-hdfs/cache/hdfs/dfs/data/current/BP-1067413441-127.0.0.1-1508775264580/current/finalized/subdir0/subdir4/blk_1073742856
+
+
+sudo tail /var/lib/hadoop-hdfs/cache/hdfs/dfs/data/current/BP-1067413441-127.0.0.1-1508775264580/current/finalized/subdir0/subdir4/blk_1073742856
+
+To display the data from HDFS filesystem: hdfs dfs -cat stocks.csv

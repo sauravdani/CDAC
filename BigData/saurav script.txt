@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo "before beggnning"
+pighivePath=/home/cloudera/hdp/pigandhive/labs/scripts/
+salaries=salaries.txt
+small_blocks=small_blocks.txt
+sharedPath=/home/cloudera/shared/data/
+temp=/tmp/
+
+
+cp -r $sharedPath$salaries/* $pighivePath
+
+if hdfs dfs -test -e test; then
+	echo "File already present"
+	echo "Deleting directory..."
+	hdfs dfs -rm -r test
+fi
+
+cd $pighivePath
+
+hdfs dfs -put test/$salaries
+hdfs dfs -put test/$small_blocks
+
+echo "==============================================================="
+echo "printing all the data of salaries.txt"
+hdfs dfs -cat test/salaries.txt
+echo "==============================================================="
+echo "printing last 10 lines of salaries.txt"
+hdfs dfs -tail test/salaries.txt
+echo "==============================================================="
+
+echo "getting the data.txt file from HDFS to $temp folder"
+hdfs dfs -get test/salaries.txt $temp
+cd $temp
+echo "listing the data.txt file present in $temp folder"
+ls data*
+echo "printing data of data.txt"
+cat salaries.txt
+
+echo "==============================================================="
+echo "getting the $salaries and $small_block file merged"
+hdfs dfs -getmerge test $temp/merged.txt
+echo "listing the merged.txt file present in $temp folder"
+ls merged*
+echo "printing data of merged.txt"
+cat merged.txt
+
+

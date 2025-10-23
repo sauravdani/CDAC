@@ -1,0 +1,39 @@
+---
+title: "quartoDemo"
+format: html
+editor: visual
+---
+
+## Analysis
+
+load the dataset
+
+```{r}
+setwd('C:/Users/dbda.STUDENTSDC/Documents/GitHub/CDAC/Python/Jupyter')
+cars <- read.csv('cars2018.csv')
+cars
+```
+
+summary of MPG
+
+```{r}
+summary(cars$MPG)
+
+```
+
+```{python}
+import pandas as pd
+```
+
+```{python}
+crs = pd.read_csv("C:/Users/dbda.STUDENTSDC/Documents/GitHub/CDAC/Python/Jupyter/cars2018.csv")
+crs
+```
+
+```{r}
+setwd('C:/Users/dbda.STUDENTSDC/Documents/GitHub/CDAC/Python/Jupyter')
+library(ggplot2)
+a <- read.csv("gapminder.csv")
+ggplot(data=a,
+       aes(x=lifeExp,y=gdpPercap, size=pop,color = continent))  + geom_point(alpha=0.5)
+```
