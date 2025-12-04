@@ -53,6 +53,11 @@ stas <- survey %>%
   drop_na()
 
 
+#it is used to save and load the data o the global environment variabls present in the rihgt side
+#save.image("D:/rdate.RData")
+
+load("D:/rdate.RData")
+
 
 
 
